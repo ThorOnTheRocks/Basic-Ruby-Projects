@@ -1,5 +1,3 @@
-require 'pry'
-
 dictionary = ["below","down","go","going","horn","how","howdy","it","i","low","own","part","partner","sit"]
 
 def substrings (string, dictionary)
@@ -7,7 +5,7 @@ def substrings (string, dictionary)
     dictionary.each do |word|
         matches[word] = string.downcase.scan(/(?=#{word})/).count if string.downcase.include?(word)
     end
-    binding.pry
+
     matches
 end
 
